@@ -20,20 +20,25 @@ int p1Wins = 0;
 
 PlayGame();
 void PlayGame()
-{   
+{
     Console.Clear();
     player1Score = 0;
     player2Score = 0;
-    if(p1Wins != 0 || p2Wins != 0)
-    {
-        DisplayWins();
-    }
-    
-    Console.WriteLine("Welcome to a new game! Who is going to break? Enter 1 or 2");
 
+    DisplayWins();
+
+    if (p1Wins == 0 && p2Wins == 0)
+    {
+
+        Console.WriteLine("Welcome to a new game! Who is going to break? Enter 1 or 2");
+    }
+    else
+    {
+        Console.WriteLine("Welcome back! Who is going to break? Enter 1 or 2");
+    }
     int breaker = Convert.ToInt32(Console.ReadLine());
 
-    if(breaker == 2)
+    if (breaker == 2)
     {
         Player2Turn();
     }
@@ -45,29 +50,28 @@ void PlayGame()
 
 void Player1Turn()
 {
-    
+
     Console.WriteLine($"{player1}, It is your turn! Enter your score when you are finished. You currently have {player1Score} points.");
     int score = Convert.ToInt32(Console.ReadLine());
-    if(score > p1Max)
+    if (score > p1Max)
     {
         p1Max = score;
     }
     player1Score += score;
     Console.Clear();
-    if(player1Score >= maxScore)
+    if (player1Score >= maxScore)
     {
         p1Wins++;
         Console.WriteLine($"Player 2 won with a score of {player1Score}");
         Console.WriteLine();
 
-        Console.WriteLine($"{player2}'s highest score was {p2Max}");
-        Console.WriteLine($"{player1}'s highest score was {p1Max}");
-        
+        DisplayScores();
+
         Console.WriteLine("------------------------------------------");
         Console.WriteLine("Do you want to play again? Y/N");
         string temp = Console.ReadLine()!.Trim().ToLower();
 
-        if(temp == "y")
+        if (temp == "y")
         {
             PlayGame();
         }
@@ -83,29 +87,28 @@ void Player1Turn()
 }
 void Player2Turn()
 {
-    
+
     Console.WriteLine($"{player2}, It is your turn! Enter your score when you are finished. You currently have {player2Score} points.");
     int score = Convert.ToInt32(Console.ReadLine());
-    
-    if(score > p2Max)
+
+    if (score > p2Max)
     {
         p2Max = score;
     }
     player2Score += score;
     Console.Clear();
 
-    if(player2Score >= maxScore)
+    if (player2Score >= maxScore)
     {
         p2Wins++;
         Console.WriteLine($"{player2} won with a score of {player2Score}");
         Console.WriteLine();
-        Console.WriteLine($"{player1}'s highest score was {p1Max}");
-        Console.WriteLine($"{player2}'s highest score was {p2Max}");
+        DisplayScores();
         Console.WriteLine("------------------------------------------");
         Console.WriteLine("Do you want to play again? Y/N");
         string temp = Console.ReadLine()!.Trim().ToLower();
 
-        if(temp == "y")
+        if (temp == "y")
         {
             PlayGame();
         }
@@ -123,4 +126,9 @@ void DisplayWins()
 {
     Console.WriteLine($"{player1} has {p1Wins} wins.");
     Console.WriteLine($"{player2} has {p2Wins} wins.");
+}
+void DisplayScores()
+{
+    Console.WriteLine($"{player2}'s highest score was {p2Max}");
+    Console.WriteLine($"{player1}'s highest score was {p1Max}");
 }

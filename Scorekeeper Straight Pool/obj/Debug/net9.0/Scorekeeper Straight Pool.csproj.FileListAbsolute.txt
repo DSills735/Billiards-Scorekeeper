@@ -12,3 +12,4 @@ C:\Users\David\OneDrive\Desktop\14.1 Pool Scorekeeper\Scorekeeper Straight Pool\
 C:\Users\David\OneDrive\Desktop\14.1 Pool Scorekeeper\Scorekeeper Straight Pool\obj\Debug\net9.0\Scorekeeper Straight Pool.pdb
 C:\Users\David\OneDrive\Desktop\14.1 Pool Scorekeeper\Scorekeeper Straight Pool\obj\Debug\net9.0\Scorekeeper Straight Pool.genruntimeconfig.cache
 C:\Users\David\OneDrive\Desktop\14.1 Pool Scorekeeper\Scorekeeper Straight Pool\obj\Debug\net9.0\ref\Scorekeeper Straight Pool.dll
+C:\Users\David\OneDrive\Desktop\14.1 Pool Scorekeeper\Scorekeeper Straight Pool\obj\Debug\net9.0\Scorekeeper Straight Pool.sourcelink.json
