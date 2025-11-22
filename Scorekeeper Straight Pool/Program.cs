@@ -85,7 +85,7 @@ void Player1Turn()
     if (player1Score >= maxScore)
     {
         p1Wins++;
-        Console.WriteLine($"Player 2 won with a score of {player1Score}");
+        Console.WriteLine($"{player1} won with a score of {player1Score}");
         Console.WriteLine();
 
         DisplayScores();
