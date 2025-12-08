@@ -1,4 +1,4 @@
-This is a scorekeeper for 2 players to play a billiards game known as straight pool (Also referred to as 14.1 Pool). 
+This is a scorekeeper for 2 players to play a billiards game known as straight pool (Also referred to as 14.1 Pool). I am planning on adding a snooker scorekeeper in the near future.  
 
 Straight pool has a scoring system in which any ball can be worth whatever the two players agree to. You play to a maximum score (Often 150, and each ball is worth their numerical value). 
 The intention of this was to help me and a friend score the game. This will be periodically adjusted as needed. 
