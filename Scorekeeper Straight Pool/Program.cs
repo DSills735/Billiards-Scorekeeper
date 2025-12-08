@@ -1,191 +1,54 @@
 ﻿using System.Transactions;
 
-Console.WriteLine("Enter the name of Player 1:");
 
-string player1 = Console.ReadLine()!;
-
-Console.WriteLine("Enter the name of Player 2:");
-
-string player2 = Console.ReadLine()!;
-
-Console.WriteLine("What score do you want to play to?");
-
-int maxScore = Convert.ToInt32(Console.ReadLine());
-int player1Score = 0;
-int player2Score = 0;
-int p1Max = 0;
-int p2Max = 0;
-int p2Wins = 0;
-int p1Wins = 0;
-
-
-PlayStraightPool();
-
-void PlayStraightPool()
+public static class Program
 {
-    Console.Clear();
-    player1Score = 0;
-    player2Score = 0;
-    p1Max = 0;
-    p2Max = 0;
 
-    DisplayWins();
-    CheckWins();
-}
-
-void Player1Turn()
-{
-    bool validInput = false;
-    int score = 0;
-    Console.WriteLine($"{player1}, It is your turn! Enter your score when you are finished. You currently have {player1Score} points.");
-    
-    while (!validInput)
+    static void Main(string[] args)
     {
-        string pointScored= Console.ReadLine()!;
-        if(int.TryParse(pointScored, out score))
+        MainMenu();
+    }
+
+    internal static void MainMenu()
+    {
+        Console.WriteLine("Welcome to the pool tracker. Please enter the player names.");
+        Console.WriteLine("Enter the name of Player 1:");
+
+        string player1 = Console.ReadLine()!;
+
+        Console.WriteLine("Enter the name of Player 2:");
+
+        string player2 = Console.ReadLine()!;
+
+        Console.Clear();
+
+        Console.WriteLine($"{player1} and {player2}, what game do you want to play? Pick an option from below.");
+        Console.WriteLine("1. Play Straight pool");
+        Console.WriteLine("2. Play snooker -- NOT ACTIVE YET");
+
+        string userInput = Console.ReadLine()!;
+        bool validInput = false;
+
+        while (!validInput)
         {
+
+        if (userInput == "1"){
+            StraightPool.PlayStraightPool(player1, player2);
             validInput = true;
+            Console.Clear();
         }
-        else
-        {
-            Console.WriteLine("Invalid input. Please input how many points you scored.");
+        else if(userInput == "2")
+            {
+                
+                //This will lead to snooker eventually.
+            }
+            else
+            {
+                Console.WriteLine("Please enter an option from above.");
+                userInput = Console.ReadLine()!;
+            }
+
         }
+    }
     }
     
-    if (score > p1Max)
-    {
-        p1Max = score;
-    }
-    player1Score += score;
-    Console.Clear();
-    if (player1Score >= maxScore)
-    {
-        p1Wins++;
-        Console.WriteLine($"{player1} won with a score of {player1Score}");
-        Console.WriteLine();
-
-        DisplayScores();
-
-        Console.WriteLine("------------------------------------------");
-        Console.WriteLine("Do you want to play again? Y/N");
-        string temp = Console.ReadLine()!.Trim().ToLower();
-
-        if (temp == "y")
-        {
-            PlayStraightPool();
-        }
-        else
-        {
-            Environment.Exit(0);
-        }
-
-    }
-    Console.WriteLine($"{player1} scored {score}, and has a total score of {player1Score}");
-    Console.WriteLine();
-    Player2Turn();
-}
-void Player2Turn()
-{
-    int score = 0;
-    bool validInput = false;
-    Console.WriteLine($"{player2}, It is your turn! Enter your score when you are finished. You currently have {player2Score} points.");
-    
-    while (!validInput)
-    {
-        string pointScored= Console.ReadLine()!;
-        if(int.TryParse(pointScored, out score))
-        {
-            validInput = true;
-        }
-        else
-        {
-            Console.WriteLine("Invalid input. Please input how many points you scored.");
-        }
-    }
-
-    if (score > p2Max)
-    {
-        p2Max = score;
-    }
-    player2Score += score;
-    Console.Clear();
-
-    if (player2Score >= maxScore)
-    {
-        p2Wins++;
-        Console.WriteLine($"{player2} won with a score of {player2Score}");
-        Console.WriteLine();
-        DisplayScores();
-        Console.WriteLine("------------------------------------------");
-        Console.WriteLine("Do you want to play again? Y/N");
-        string temp = Console.ReadLine()!.Trim().ToLower();
-
-        if (temp == "y")
-        {
-            PlayStraightPool();
-        }
-        else
-        {
-            Environment.Exit(0);
-        }
-    }
-    Console.WriteLine($"{player2} scored {score}, and has a total score of {player2Score}");
-    Console.WriteLine();
-    Player1Turn();
-}
-
-void DisplayWins()
-{
-    Console.WriteLine($"{player1} has {p1Wins} wins.");
-    Console.WriteLine($"{player2} has {p2Wins} wins.");
-}
-void DisplayScores()
-{
-    Console.WriteLine($"{player2}'s highest score was {p2Max}");
-    Console.WriteLine($"{player1}'s highest score was {p1Max}");
-}
-void CheckWins()
-{
-    if (p1Wins == 0 && p2Wins == 0)
-    {
-
-        Console.WriteLine("Welcome to a new game! Who is going to break? Enter 1 or 2");
-    }
-    else if (p1Wins == 2 || p2Wins == 2)
-    {
-        if (p1Wins == 2)
-        {
-            Console.Clear();
-            Console.WriteLine($"{player1} has won the frame by a score of {p1Wins} to {p2Wins}.");
-            Console.WriteLine();
-            Console.WriteLine("-------------------------------------");
-            Console.WriteLine();
-            Console.WriteLine("Welcome back! Who is going to break? Enter 1 or 2");
-        }
-        else
-        {
-            Console.Clear();
-            Console.WriteLine($"{player2} has won the frame by a score of {p2Wins} to {p1Wins}.");
-            Console.WriteLine();
-            Console.WriteLine("-------------------------------------");
-            Console.WriteLine();
-            Console.WriteLine("Welcome back! Who is going to break? Enter 1 or 2");
-        }
-        p1Wins = 0;
-        p2Wins = 0;
-    }
-    else
-    {
-        Console.WriteLine("Welcome back! Who is going to break? Enter 1 or 2");
-    }
-    int breaker = Convert.ToInt32(Console.ReadLine());
-
-    if (breaker == 2)
-    {
-        Player2Turn();
-    }
-    else
-    {
-        Player1Turn();
-    }
-}
