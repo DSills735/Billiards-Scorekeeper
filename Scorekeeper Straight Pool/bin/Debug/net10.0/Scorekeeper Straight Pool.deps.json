@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v10.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v10.0": {
+      "Scorekeeper Straight Pool/1.0.0": {
+        "runtime": {
+          "Scorekeeper Straight Pool.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Scorekeeper Straight Pool/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

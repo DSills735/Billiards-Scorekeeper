@@ -4,7 +4,7 @@
 public static class Program
 {
 
-    static void Main(string[] args)
+    internal static void Main(string[] args)
     {
         MainMenu();
     }
@@ -41,6 +41,8 @@ public static class Program
             {
                 
                 //This will lead to snooker eventually.
+                Console.WriteLine("Snooker is not open yet. Enter an option from above.");
+                userInput = Console.ReadLine()!;
             }
             else
             {

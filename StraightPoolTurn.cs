@@ -1,6 +1,6 @@
 public static class StraightPoolTurn
 {
-    internal static int StraightTurn(string playerName, int playerNum, int currScore)
+    internal static int StraightTurn(string playerName, int currScore)
     {
         bool validInput = false;
         int roundScore = 0;

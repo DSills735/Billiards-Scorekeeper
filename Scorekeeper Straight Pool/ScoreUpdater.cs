@@ -6,15 +6,7 @@ public static class ScoreUpdater
        int max = score;
        return score;
     }
-    
-    //Update the score of the game
-    internal static int StraightScorekeeper(int playerScore, string playerName, int score)
-    {
-        playerScore += score;
-        Console.WriteLine($"{playerName} scored {score}. You have {playerScore} points.");
-        return playerScore;
-    }
-
+ 
 //Check to see if a player met the defined win condition
     internal static bool WinCondition(int score, int maxScore)
     {
@@ -27,7 +19,6 @@ public static class ScoreUpdater
             return false;
         }
     }
-
 
     internal static int Winner(int p1Score, int p2Score)
 {   
