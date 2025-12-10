@@ -84,11 +84,13 @@ public class Snooker
             if (winner == 1)
             {
                 Console.WriteLine($"{player1} won with a score of {player1Score} to {player2Score}.");
+                ScoreHistory.AddToHistory(player1);
                 p1Wins += 1;
             }
             else
             {
                 Console.WriteLine($"{player2} won with a score of {player2Score} to {player1Score}.");
+                ScoreHistory.AddToHistory(player2);
                 p2Wins += 1;
             }
             
