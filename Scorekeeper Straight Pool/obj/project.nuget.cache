@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "pPrf7+SH8ro=",
+  "dgSpecHash": "a2W+6RMqelw=",
   "success": true,
-  "projectFilePath": "C:\\Users\\David\\OneDrive\\Desktop\\Billiards Scorekeeper\\Billiards-Scorekeeper\\Scorekeeper Straight Pool\\Scorekeeper Straight Pool.csproj",
+  "projectFilePath": "C:\\Users\\David\\source\\repos\\Billiards-Scorekeeper\\Scorekeeper Straight Pool\\Scorekeeper Straight Pool.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\David\\.nuget\\packages\\microsoft.data.sqlite\\10.0.1\\microsoft.data.sqlite.10.0.1.nupkg.sha512",
     "C:\\Users\\David\\.nuget\\packages\\microsoft.data.sqlite.core\\10.0.1\\microsoft.data.sqlite.core.10.0.1.nupkg.sha512",
+    "C:\\Users\\David\\.nuget\\packages\\spectre.console\\0.54.0\\spectre.console.0.54.0.nupkg.sha512",
     "C:\\Users\\David\\.nuget\\packages\\sqlitepclraw.bundle_e_sqlite3\\2.1.11\\sqlitepclraw.bundle_e_sqlite3.2.1.11.nupkg.sha512",
     "C:\\Users\\David\\.nuget\\packages\\sqlitepclraw.core\\2.1.11\\sqlitepclraw.core.2.1.11.nupkg.sha512",
     "C:\\Users\\David\\.nuget\\packages\\sqlitepclraw.lib.e_sqlite3\\2.1.11\\sqlitepclraw.lib.e_sqlite3.2.1.11.nupkg.sha512",

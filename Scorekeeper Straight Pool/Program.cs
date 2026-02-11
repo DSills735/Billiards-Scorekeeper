@@ -1,4 +1,5 @@
 ﻿using Microsoft.Data.Sqlite;
+using Spectre.Console;
 public class Program
 {
     static String connString = "Data Source = poolHistory.db";
@@ -37,11 +38,11 @@ public class Program
     internal static void MainMenu(string player1, string player2)
     {
         Console.Clear();
-        Console.WriteLine($"{player1} and {player2}, what game do you want to play? Pick an option from below.");
-        Console.WriteLine("1. Play Straight pool");
-        Console.WriteLine("2. Play snooker");
-        Console.WriteLine("3. View History");
-        Console.WriteLine("4. Exit");
+        AnsiConsole.MarkupLine($"{player1} and {player2}, what game do you want to play? Pick an option from below.");
+        AnsiConsole.MarkupLine("[green]1. Play Straight pool[/]");
+        AnsiConsole.MarkupLine("[red]2. Play snooker[/]");
+        AnsiConsole.MarkupLine("[blue]3. View History[/]");
+        AnsiConsole.MarkupLine("[maroon]4. Exit[/]");
 
         string userInput = Console.ReadLine()!;
         bool validInput = false;

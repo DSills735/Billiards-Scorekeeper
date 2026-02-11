@@ -55,6 +55,8 @@ public class StraightPool
                     player1Score += roundScore;
                     Console.WriteLine($"{player1} scored {roundScore}. The score is now {player1}: {player1Score} to {player2}: {player2Score}");
                     Console.WriteLine();
+                    ScoreUpdater.ScoreDisplay(player1Score, player2Score, player1, player2, maxScore);
+                    Console.WriteLine();
                     endCondition = ScoreUpdater.WinCondition(player1Score, maxScore);
                     player = 2;
                 }
@@ -67,6 +69,8 @@ public class StraightPool
                     }
                     player2Score += roundScore;
                     Console.WriteLine($"{player2} scored {roundScore}. The score is now {player1}: {player1Score} to {player2}: {player2Score}");
+                    Console.WriteLine();
+                    ScoreUpdater.ScoreDisplay(player1Score, player2Score, player1, player2, maxScore);
                     Console.WriteLine();
                     endCondition = ScoreUpdater.WinCondition(player2Score, maxScore);
                     player = 1;

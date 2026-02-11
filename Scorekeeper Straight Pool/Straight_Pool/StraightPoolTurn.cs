@@ -1,3 +1,5 @@
+using Spectre.Console;
+
 public static class StraightPoolTurn
 {
     internal static int StraightTurn(string playerName, int currScore)
@@ -6,6 +8,7 @@ public static class StraightPoolTurn
         int roundScore = 0;
 
         Console.WriteLine($"{playerName} it is your turn. Enter your score when you are finished. You have {currScore} points.");
+        
 
         while (!validInput)
         {
