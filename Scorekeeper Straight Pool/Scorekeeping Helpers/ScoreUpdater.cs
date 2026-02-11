@@ -9,7 +9,7 @@ public static class ScoreUpdater
     }
 
     //Check to see if a player met the defined win condition
-    internal static bool WinCondition(int score, int maxScore)
+    public static bool WinCondition(int score, int maxScore)
     {
         if (score >= maxScore)
         {
