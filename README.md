@@ -9,6 +9,8 @@ SQLite
 OOP - A special focus was taken on making sure there was proper separation of concerns within this project. It is something I have not done great with in the past, so I am working on improving that. 
 I think it could be better, specifically in the StraightPool.cs file.  
 
+Feb 2026 update: Added a singular unit test for win condition of straight pool with several test cases. I also added Spectre Console to dispaly a visual scoreboard in straight pool. I left snooker untouched. 
+
 
 
 
