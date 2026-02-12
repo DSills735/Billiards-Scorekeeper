@@ -47,7 +47,7 @@ public class StraightPool
             {
                 if (player == 1)
                 {
-                    int roundScore = StraightPoolTurn.StraightTurn(player1, player1Score);
+                    int roundScore = StraightPoolTurn.StraightTurn(player1);
                     if (roundScore > p1Max)
                     {
                         p1Max = ScoreUpdater.MaxScoreUpdater(roundScore);
@@ -62,7 +62,7 @@ public class StraightPool
                 }
                 else if (player == 2)
                 {
-                    int roundScore = StraightPoolTurn.StraightTurn(player2, player2Score);
+                    int roundScore = StraightPoolTurn.StraightTurn(player2);
                     if (roundScore > p2Max)
                     {
                         p2Max = ScoreUpdater.MaxScoreUpdater(roundScore);
