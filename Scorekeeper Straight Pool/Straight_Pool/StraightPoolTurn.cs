@@ -2,12 +2,12 @@ using Spectre.Console;
 
 public static class StraightPoolTurn
 {
-    internal static int StraightTurn(string playerName, int currScore)
+    internal static int StraightTurn(string playerName)
     {
         bool validInput = false;
         int roundScore = 0;
 
-        Console.WriteLine($"{playerName} it is your turn. Enter your score when you are finished. You have {currScore} points.");
+        Console.WriteLine($"{playerName} it is your turn. Enter your score when you are finished.");
         
 
         while (!validInput)
