@@ -1,4 +1,4 @@
-
+using Spectre.Console;
 public class StraightPool
 {
         
@@ -19,7 +19,7 @@ public class StraightPool
         p1Max = 0;
         p2Max = 0;
 
-        Console.WriteLine("Who is going to break? Enter 1 or 2.");
+        Console.WriteLine($"Who is going to break? Enter 1 ({player1}) or 2 ({player2}).");
         bool validInput = false;
 
         //picks who will go first then exit the loop
@@ -99,7 +99,7 @@ public class StraightPool
             Console.WriteLine("Please choose an option from below:");
             Console.WriteLine("\t1: Play Straight Pool again?");
             Console.WriteLine("\t2: Return to the main menu.");
-            Console.WriteLine("\t3: Quit the application.");
+            AnsiConsole.MarkupLine("\t[maroon]3: Quit the application.[/]");
 
             string response = Console.ReadLine()!;
             validInput = false;
