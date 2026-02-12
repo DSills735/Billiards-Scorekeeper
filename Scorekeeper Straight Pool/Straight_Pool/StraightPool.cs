@@ -53,7 +53,7 @@ public class StraightPool
                         p1Max = ScoreUpdater.MaxScoreUpdater(roundScore);
                     }
                     player1Score += roundScore;
-                    Console.WriteLine($"{player1} scored {roundScore}. The score is now {player1}: {player1Score} to {player2}: {player2Score}");
+                    Console.WriteLine($"{player1} scored {roundScore}.");
                     Console.WriteLine();
                     ScoreUpdater.ScoreDisplay(player1Score, player2Score, player1, player2, maxScore);
                     Console.WriteLine();
@@ -68,7 +68,7 @@ public class StraightPool
                         p2Max = ScoreUpdater.MaxScoreUpdater(roundScore);
                     }
                     player2Score += roundScore;
-                    Console.WriteLine($"{player2} scored {roundScore}. The score is now {player1}: {player1Score} to {player2}: {player2Score}");
+                    Console.WriteLine($"{player2} scored {roundScore}.");
                     Console.WriteLine();
                     ScoreUpdater.ScoreDisplay(player1Score, player2Score, player1, player2, maxScore);
                     Console.WriteLine();
