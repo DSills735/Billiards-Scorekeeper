@@ -18,8 +18,7 @@ The hardest part of this when I was developing it was trying the best I could to
 
 I do have one singular unit test. It was the first unit test ive ever written, and done entirely for practice purposes. 
 
-## Optional Future plans / Further Info 
-
---- You do not need to understand the rules to understand the functionality of this, but these might help if using the program --- 
+## Rules of 14.1 Straight Pool and Snooker
 An example of the rules for straight pool can be found here: https://www.cuesight.com/wpa/14-1-straight-pool-rules/
+
 Snooker rules can be found here: https://wpbsa.com/wp-content/uploads/Rulebook-Website-Updated-May-2022-2.pdf
